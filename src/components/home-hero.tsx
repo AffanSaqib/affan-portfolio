@@ -35,16 +35,16 @@ export function HomeHero() {
       </div>
 
       <Container className="grid min-h-[calc(100svh-4.5rem)] items-center gap-y-10 py-14 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-12 lg:gap-y-7 lg:py-12 xl:gap-x-20">
-        <motion.div initial={{ opacity: 0, y: reduceMotion ? 0 : 18 }} animate={{ opacity: 1, y: 0 }} transition={entrance} className="relative z-10 lg:col-start-1 lg:row-start-1">
+        <motion.div initial={{ opacity: 1, y: reduceMotion ? 0 : 18 }} animate={{ opacity: 1, y: 0 }} transition={entrance} className="relative z-10 lg:col-start-1 lg:row-start-1">
           <p className="mb-7 text-[10px] font-semibold tracking-[0.18em] text-[#87a6ff] sm:text-xs sm:tracking-[0.22em]">
             DIGITAL MARKETING · SMM · DEVELOPMENT · CREATIVE
           </p>
           <h1 className="font-serif text-[clamp(2.6rem,9.2vw,7.5rem)] font-normal leading-[0.88] tracking-[-0.065em] text-white">
             {headline.map((line, index) => (
-              <span key={line} className="block overflow-hidden pb-[0.08em]">
+              <span key={line} className="block pb-[0.08em]">
                 <motion.span
                   className="block"
-                  initial={{ y: reduceMotion ? 0 : "110%", opacity: reduceMotion ? 1 : 0 }}
+                  initial={{ y: reduceMotion ? 0 : "18%", opacity: 1 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ ...entrance, delay: reduceMotion ? 0 : 0.18 + index * 0.13 }}
                 >
@@ -53,12 +53,12 @@ export function HomeHero() {
               </span>
             ))}
           </h1>
-          <motion.p initial={{ opacity: 0, y: reduceMotion ? 0 : 10 }} animate={{ opacity: 1, y: 0 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.65 }} className="mt-8 text-sm tracking-[0.025em] text-[var(--muted)] sm:text-base">
+          <motion.p initial={{ opacity: 1, y: reduceMotion ? 0 : 10 }} animate={{ opacity: 1, y: 0 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.65 }} className="mt-8 text-sm tracking-[0.025em] text-[var(--muted)] sm:text-base">
             Marketing. Social. Development. Creative.
           </motion.p>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.28 }} className="relative order-2 mx-auto w-full max-w-[32rem] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none">
+        <motion.div initial={{ opacity: 1, scale: reduceMotion ? 1 : 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.28 }} className="relative order-2 mx-auto w-full max-w-[32rem] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none">
           <motion.div animate={reduceMotion ? undefined : { y: [0, -7, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="relative aspect-square">
             <motion.div aria-hidden className="absolute inset-[-6%] rounded-full border border-[rgba(110,145,255,0.23)]" animate={reduceMotion ? undefined : { rotate: 360 }} transition={{ duration: 36, repeat: Infinity, ease: "linear" }} />
             <motion.div aria-hidden className="absolute inset-[4%] rounded-full border border-dashed border-[rgba(151,114,255,0.17)]" animate={reduceMotion ? undefined : { rotate: -360 }} transition={{ duration: 48, repeat: Infinity, ease: "linear" }} />
@@ -70,7 +70,7 @@ export function HomeHero() {
           </motion.div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }} animate={{ opacity: 1, y: 0 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.76 }} className="order-3 flex flex-wrap gap-3 lg:col-start-1 lg:row-start-2">
+        <motion.div initial={{ opacity: 1, y: reduceMotion ? 0 : 12 }} animate={{ opacity: 1, y: 0 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.76 }} className="order-3 flex flex-wrap gap-3 lg:col-start-1 lg:row-start-2">
           <HeroLink href="/work" primary>VIEW MY WORK</HeroLink>
           <HeroLink href="/contact">LET&apos;S TALK</HeroLink>
         </motion.div>

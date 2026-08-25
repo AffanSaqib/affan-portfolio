@@ -9,7 +9,8 @@ import { Container } from "@/components/ui/container";
 const services = ["Digital Marketing & SEO", "Social Media Marketing", "Web Development", "Branding & Design"];
 const work = ["Placeholder Project 01", "Placeholder Project 02", "Placeholder Project 03", "Placeholder Project 04"];
 
-const reveal = { hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } };
+// Keep each section visible in the server-rendered fallback; Motion only refines its position on hydration.
+const reveal = { hidden: { opacity: 1, y: 22 }, visible: { opacity: 1, y: 0 } };
 
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return <div className="max-w-2xl"><p className="mb-4 text-[10px] font-semibold tracking-[0.2em] text-[#87a6ff] sm:text-xs">{eyebrow}</p><h2 className="font-serif text-4xl leading-[0.95] tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">{title}</h2></div>;

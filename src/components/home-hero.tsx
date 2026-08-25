@@ -34,12 +34,12 @@ export function HomeHero() {
         ))}
       </div>
 
-      <Container className="grid min-h-[calc(100svh-4.5rem)] items-center gap-y-10 py-14 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-12 lg:gap-y-7 lg:py-12 xl:gap-x-20">
+      <Container className="grid min-h-[calc(100svh-4.5rem)] items-center gap-y-8 py-12 sm:py-16 lg:grid-cols-[1fr_1fr] lg:gap-x-10 lg:gap-y-5 lg:py-8 xl:gap-x-16">
         <motion.div initial={{ opacity: 1, y: reduceMotion ? 0 : 18 }} animate={{ opacity: 1, y: 0 }} transition={entrance} className="relative z-10 lg:col-start-1 lg:row-start-1">
-          <p className="mb-7 text-[10px] font-semibold tracking-[0.18em] text-[#87a6ff] sm:text-xs sm:tracking-[0.22em]">
+          <p className="mb-5 text-[10px] font-semibold tracking-[0.18em] text-[#87a6ff] sm:text-xs sm:tracking-[0.22em]">
             DIGITAL MARKETING · SMM · DEVELOPMENT · CREATIVE
           </p>
-          <h1 className="font-serif text-[clamp(2.6rem,9.2vw,7.5rem)] font-normal leading-[0.88] tracking-[-0.065em] text-white">
+          <h1 className="font-serif text-[clamp(2.45rem,6.6vw,5.4rem)] font-normal leading-[0.88] tracking-[-0.065em] text-white">
             {headline.map((line, index) => (
               <span key={line} className="block pb-[0.08em]">
                 <motion.span
@@ -53,16 +53,20 @@ export function HomeHero() {
               </span>
             ))}
           </h1>
-          <motion.p initial={{ opacity: 1, y: reduceMotion ? 0 : 10 }} animate={{ opacity: 1, y: 0 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.65 }} className="mt-8 text-sm tracking-[0.025em] text-[var(--muted)] sm:text-base">
+          <motion.p initial={{ opacity: 1, y: reduceMotion ? 0 : 10 }} animate={{ opacity: 1, y: 0 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.65 }} className="mt-6 text-sm tracking-[0.025em] text-[var(--muted)] sm:text-base">
             Marketing. Social. Development. Creative.
           </motion.p>
         </motion.div>
 
-        <motion.div initial={{ opacity: 1, scale: reduceMotion ? 1 : 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.28 }} className="relative order-2 mx-auto w-full max-w-[32rem] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none">
+        <motion.div initial={{ opacity: 1, scale: reduceMotion ? 1 : 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ ...entrance, delay: reduceMotion ? 0 : 0.28 }} className="relative order-2 mx-auto w-full max-w-[31rem] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:translate-x-3 lg:scale-[1.06]">
           <motion.div animate={reduceMotion ? undefined : { y: [0, -7, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="relative aspect-square">
-            <motion.div aria-hidden className="absolute inset-[-6%] rounded-full border border-[rgba(110,145,255,0.23)]" animate={reduceMotion ? undefined : { rotate: 360 }} transition={{ duration: 36, repeat: Infinity, ease: "linear" }} />
-            <motion.div aria-hidden className="absolute inset-[4%] rounded-full border border-dashed border-[rgba(151,114,255,0.17)]" animate={reduceMotion ? undefined : { rotate: -360 }} transition={{ duration: 48, repeat: Infinity, ease: "linear" }} />
-            <div aria-hidden className="absolute inset-[11%] rounded-full bg-[radial-gradient(circle_at_48%_32%,rgba(71,119,255,0.25),transparent_62%)] blur-2xl" />
+            <motion.svg aria-hidden viewBox="0 0 100 100" className="absolute inset-[-4%] size-[108%]" animate={reduceMotion ? undefined : { rotate: 360 }} transition={{ duration: 44, repeat: Infinity, ease: "linear" }}>
+              <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(122,154,255,0.18)" strokeWidth="0.25" strokeDasharray="30 18 9 43" />
+            </motion.svg>
+            <motion.svg aria-hidden viewBox="0 0 100 100" className="absolute inset-[2%] size-[96%]" animate={reduceMotion ? undefined : { rotate: -360 }} transition={{ duration: 58, repeat: Infinity, ease: "linear" }}>
+              <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(169,140,255,0.11)" strokeWidth="0.2" strokeDasharray="12 28 18 42" />
+            </motion.svg>
+            <div aria-hidden className="absolute inset-[12%] rounded-full bg-[radial-gradient(circle_at_48%_32%,rgba(71,119,255,0.15),transparent_62%)] blur-2xl" />
             <div className="absolute inset-[7%] overflow-hidden rounded-full border border-white/10 bg-[#080b18] shadow-[0_24px_90px_rgba(0,0,0,0.5)]">
               <Image src="/assets/affan-portrait.png" alt="Affan" fill priority sizes="(max-width: 1024px) 85vw, 45vw" className="object-cover object-center" />
             </div>

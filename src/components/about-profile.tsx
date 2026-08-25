@@ -13,11 +13,11 @@ export function AboutProfile() {
   const transition = { duration: reduceMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] as const };
 
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28 lg:py-32">
+    <section className="relative overflow-hidden bg-[#0e1b2f] py-20 sm:py-28 lg:py-32">
       <div aria-hidden className="pointer-events-none absolute left-[-18rem] top-[20rem] -z-10 size-[36rem] rounded-full bg-[rgba(76,113,255,0.06)] blur-[130px]" />
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-24">
-          <motion.div initial={{ opacity: 1, scale: reduceMotion ? 1 : 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={transition} className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden border border-[var(--line)] bg-[#090c19]">
+          <motion.div initial={{ opacity: 1, scale: reduceMotion ? 1 : 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={transition} className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden border border-[var(--line)] bg-[var(--surface-raised)]">
             <div aria-hidden className="absolute inset-0 z-10 bg-[linear-gradient(180deg,transparent_45%,rgba(5,7,17,0.36))]" />
             <Image src="/assets/affan-portrait.png" alt="Affan" fill priority sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover object-center" />
             <motion.span aria-hidden className="absolute bottom-7 left-7 z-20 size-2 rounded-full bg-[#8dabff] shadow-[0_0_18px_5px_rgba(82,133,255,0.38)]" animate={reduceMotion ? undefined : { opacity: [0.45, 1, 0.45] }} transition={{ duration: 3, repeat: Infinity }} />

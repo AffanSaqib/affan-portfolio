@@ -6,8 +6,8 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { Container } from "@/components/ui/container";
 
-const services = ["Digital Marketing & SEO", "Social Media Marketing", "Web Development", "Branding & Design"];
-const work = ["Placeholder Project 01", "Placeholder Project 02", "Placeholder Project 03", "Placeholder Project 04"];
+const services = ["Social Media Marketing", "Digital Marketing & SEO", "Web Designing", "Web Development", "AI Automation Tasks"];
+const work = ["Carpools UAE", "Ultimate Group International", "Apex Signal", "AI Automation Tool"];
 
 // Keep each section visible in the server-rendered fallback; Motion only refines its position on hydration.
 const reveal = { hidden: { opacity: 1, y: 22 }, visible: { opacity: 1, y: 0 } };
@@ -36,7 +36,7 @@ export function HomeSections() {
         <Container>
           <motion.div variants={reveal} initial="hidden" whileInView="visible" viewport={viewport} transition={transition} className="flex flex-wrap items-end justify-between gap-8"><SectionHeading eyebrow="SELECTED WORK" title="Work in focus." /><Link href="/work" className="group inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] text-white transition hover:text-[#9ab5ff]">VIEW ALL <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" /></Link></motion.div>
           <motion.div className="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-18 lg:gap-6" initial="hidden" whileInView="visible" viewport={viewport} variants={{ visible: { transition: { staggerChildren: reduceMotion ? 0 : 0.1 } } }}>
-            {work.map((title, index) => <motion.article key={title} variants={reveal} transition={transition} className="group relative aspect-[4/3] overflow-hidden border border-[var(--line)] bg-[#080b18] p-5 sm:p-6"><div aria-hidden className={`absolute inset-0 opacity-80 transition duration-700 group-hover:scale-105 ${index % 2 === 0 ? "bg-[radial-gradient(circle_at_25%_25%,rgba(72,113,255,0.22),transparent_42%),linear-gradient(135deg,#0b1023,#060812_72%)]" : "bg-[radial-gradient(circle_at_75%_30%,rgba(142,101,255,0.16),transparent_40%),linear-gradient(135deg,#111126,#060812_72%)]"}`} /><div aria-hidden className="absolute inset-[12%] border border-white/[0.07]" /><div className="relative flex h-full flex-col justify-between"><div className="flex items-start justify-between"><span className="text-[10px] font-semibold tracking-[0.18em] text-[#9ab5ff]">PLACEHOLDER</span><ArrowUpRight size={17} className="text-white/70" /></div><h3 className="max-w-48 text-xl text-white sm:text-2xl">{title}</h3></div></motion.article>)}
+            {work.map((title, index) => <motion.article key={title} variants={reveal} transition={transition} className="group relative aspect-[4/3] overflow-hidden border border-[var(--line)] bg-[#080b18] p-5 sm:p-6"><div aria-hidden className={`absolute inset-0 opacity-80 transition duration-700 group-hover:scale-105 ${index % 2 === 0 ? "bg-[radial-gradient(circle_at_25%_25%,rgba(72,113,255,0.22),transparent_42%),linear-gradient(135deg,#0b1023,#060812_72%)]" : "bg-[radial-gradient(circle_at_75%_30%,rgba(142,101,255,0.16),transparent_40%),linear-gradient(135deg,#111126,#060812_72%)]"}`} /><div aria-hidden className="absolute inset-[12%] border border-white/[0.07]" /><div className="relative flex h-full flex-col justify-between"><div className="flex items-start justify-between"><span className="text-[10px] font-semibold tracking-[0.18em] text-[#9ab5ff]">SELECTED PROJECT</span><ArrowUpRight size={17} className="text-white/70" /></div><h3 className="max-w-48 text-xl text-white sm:text-2xl">{title}</h3></div></motion.article>)}
           </motion.div>
         </Container>
       </section>

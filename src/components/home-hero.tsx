@@ -67,8 +67,8 @@ export function HomeHero() {
               <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(169,140,255,0.11)" strokeWidth="0.2" strokeDasharray="12 28 18 42" />
             </motion.svg>
             <div aria-hidden className="absolute inset-[12%] rounded-full bg-[radial-gradient(circle_at_48%_32%,rgba(71,119,255,0.15),transparent_62%)] blur-2xl" />
-            <div className="absolute inset-[7%] overflow-hidden rounded-full border border-white/10 bg-[var(--surface-raised)] shadow-[0_24px_90px_rgba(0,0,0,0.5)]">
-              <Image src="/assets/affan-portrait.png" alt="Affan" fill priority sizes="(max-width: 1024px) 85vw, 45vw" className="object-cover object-center" />
+            <div className="absolute inset-[4%] overflow-hidden [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_76%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_76%)]">
+              <Image src="/assets/affan-portrait.png" alt="Affan" fill priority sizes="(max-width: 1024px) 85vw, 45vw" className="scale-[1.16] object-cover object-[52%_45%]" />
             </div>
             <span aria-hidden className="absolute left-[7%] top-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#8dabff] shadow-[0_0_18px_5px_rgba(82,133,255,0.42)]" />
           </motion.div>

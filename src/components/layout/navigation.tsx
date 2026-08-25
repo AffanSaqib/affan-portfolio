@@ -15,10 +15,10 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[#08111f]/88 backdrop-blur-md">
-      <Container className="flex h-20 items-center justify-between">
+      <Container className="flex h-22 items-center justify-between">
         <motion.div initial={{ opacity: 1, x: reduceMotion ? 0 : -12 }} animate={{ opacity: 1, x: 0 }} transition={transition}>
           <Link href="/" className="block rounded-full border border-white/10 bg-white/[0.04] p-1 shadow-[0_8px_30px_rgba(0,0,0,0.22)] transition hover:border-[#6d8dff]/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#87a6ff]" aria-label="Home">
-            <Image src="/assets/affan-digital-works-logo.png" alt="Affan Digital Works" width={60} height={60} priority className="size-11 rounded-full object-contain sm:size-12" />
+            <Image src="/assets/affan-digital-works-logo.png" alt="Affan Digital Works" width={68} height={68} priority className="size-12 rounded-full object-contain sm:size-13" />
           </Link>
         </motion.div>
         <motion.nav initial={{ opacity: 1, y: reduceMotion ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} transition={{ ...transition, delay: reduceMotion ? 0 : 0.1 }} aria-label="Primary navigation" className="hidden items-center gap-7 md:flex">
